@@ -4,7 +4,6 @@ const port = 3000;
 
 // router가져옴
 const postsRouter = require("./routes/posts.js");
-const commentsRouter = require("./routes/comments.js");
 const connect = require("./schemas"); //index.js있어도 상관없음
 connect();
 
