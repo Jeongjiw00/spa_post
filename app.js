@@ -3,7 +3,7 @@ const app = express(); // express를 실행해서 앱객체를 만들어줌.
 const port = 3000;
 
 // goods.js에서 router가져옴
-const goodsRouter = require("./routes/goods.js");
+const boardsRouter = require("./routes/boards.js");
 const cartsRouter = require("./routes/carts.js");
 const connect = require("./schemas"); //index.js있어도 상관없음
 connect();
@@ -20,31 +20,3 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(port, "포트로 서버가 열렸어요!");
 });
-
-//req.body
-// app.post("/", (req, res) => {
-//   console.log(req.body);
-
-//   res.send("기본 URI에 POST 메서드가 정상적으로 반환되었습니다.");
-// });
-
-// //API확인 -req.query
-// app.get("/", (req, res) => {
-//   console.log(req.query);
-
-//   //   res.send("정상적으로 반환되었습니다.");
-
-//   const obj = {
-//     keykey: "value입니다.",
-//     "이름입니다.": "이름일까요?",
-//   };
-//   res.json(obj); // 바로 객체넣어줘도 무관
-//   // res.status(400).json(obj); // 400에러가 난 것처럼 코드가 전달됨
-// });
-
-// //req.params
-// app.get("/:id", (req, res) => {
-//   console.log(req.params);
-
-//   res.send(":id URI정상적으로 반환되었습니다.");
-// });
